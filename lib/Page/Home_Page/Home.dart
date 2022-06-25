@@ -1,7 +1,8 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
-import 'package:tubes_ppb_gabungan/Page/History_Page/History.dart';
+import 'package:bayar_ku/Page/History_Page/History.dart';
+import 'package:bayar_ku/Page/Home_page/add.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({ Key? key }) : super(key: key);
@@ -13,7 +14,6 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   Color mainColor = Color.fromARGB(255, 248, 248, 248);
   Color secColor = Color.fromARGB(255, 236, 236, 236);
-  // Color titleColor = Color.fromARGB(255, 255, 255, 255);
   Color boxColor = Color(0xFFBCBEDC);
   @override
   Widget build(BuildContext context) {
@@ -89,16 +89,23 @@ class _HomePageState extends State<HomePage> {
                                 borderRadius: BorderRadius.all(Radius.circular(18))
                               ),
                         child: IconButton(
-                          onPressed: () {}, 
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => AddView(),
+                              ),
+                            );
+                          }, 
                           color: Colors.white,
-                          icon: Icon(Icons.send),
+                          icon: Icon(Icons.add),
                         ),
                         padding: EdgeInsets.all(8),
                             ),
                             SizedBox(
                               height: 4,
                             ),
-                            Text("Send", style: TextStyle(
+                            Text("Top up", style: TextStyle(
                               fontWeight: FontWeight.w700, 
                               fontSize: 14, 
                               color: Color.fromARGB(255, 0, 116, 248)),)
@@ -117,14 +124,14 @@ class _HomePageState extends State<HomePage> {
                         child: IconButton(
                           onPressed: () {}, 
                           color: Colors.white,
-                          icon: Icon(Icons.add),
+                          icon: Icon(Icons.send),
                         ),
                         padding: EdgeInsets.all(8),
                             ),
                             SizedBox(
                               height: 4,
                             ),
-                            Text("Top up", style: TextStyle(
+                            Text("Send", style: TextStyle(
                               fontWeight: FontWeight.w700, 
                               fontSize: 14, 
                               color: Color.fromARGB(255, 0, 116, 248)),)
