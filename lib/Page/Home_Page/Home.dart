@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:bayar_ku/Page/History_Page/History.dart';
 import 'package:bayar_ku/Page/Home_page/add.dart';
+import 'package:bayar_ku/Page/Home_page/send.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({ Key? key }) : super(key: key);
