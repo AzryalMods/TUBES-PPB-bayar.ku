@@ -122,7 +122,14 @@ class _HomePageState extends State<HomePage> {
                               borderRadius: BorderRadius.all(Radius.circular(18))
                             ),
                         child: IconButton(
-                          onPressed: () {}, 
+                          onPressed: () {
+                             Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => SendView(),
+                              ),
+                            );
+                          }, 
                           color: Colors.white,
                           icon: Icon(Icons.send),
                         ),
@@ -131,7 +138,7 @@ class _HomePageState extends State<HomePage> {
                             SizedBox(
                               height: 4,
                             ),
-                            Text("Send", style: TextStyle(
+                            Text("Transfer", style: TextStyle(
                               fontWeight: FontWeight.w700, 
                               fontSize: 14, 
                               color: Color.fromARGB(255, 0, 116, 248)),)
